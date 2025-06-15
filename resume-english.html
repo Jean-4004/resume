@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jang Jin Nyoung - Resume</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004080;
+            --accent-color: #e7f3ff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+            --text-color: #444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+        .summary {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill-category {
+            flex: 1 1 300px;
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .skill-item {
+            background-color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .work-item {
+            margin-bottom: 30px;
+        }
+
+        .work-title {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .work-date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .work-description {
+            margin-bottom: 15px;
+        }
+
+        .achievements {
+            margin-left: 20px;
+        }
+
+        .achievements li {
+            margin-bottom: 8px;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .education-institution {
+            font-style: italic;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .certification-item {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .certification-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jang Jin Nyoung</h1>
+            <div class="tagline">Ph.D. in Semiconductor & Display Device Physics</div>
+            <div class="tagline">Plasma Processing & Thin Film Expert</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 nic4004@naver.com
+                </div>
+                <div class="contact-item">
+                    📱 +82-10-2643-5538
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Objective</h2>
+            <div class="summary">
+                Development of plasma equipment and processes for display, semiconductor, and MEMS applications. 
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                My skills are an ideal match for plasma-induced process applications because of my knowledge and experience which cover from design plasma source to device optimization.  I am hoping the experience of these plasma-related process techniques will lead into the next generation semiconductor industry. 
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">My Qualifications</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Research / Development / Design / Process</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Novel Plasma Source (CVD (ICP, CCP), PVD, ECR) </span>
+                        <span class="skill-item">Dry Etching </span>
+                        <span class="skill-item">Thin Film Deposition </span>
+                        <span class="skill-item">Surface Treatment (Room Temp, Low Damage, Flexible, Large Area, Crystal Quality Control) </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Plasma Diagnostic Analysis</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Langmuir Probe </span>
+                        <span class="skill-item">Optical Emission Spectroscopy (OES) </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Thin Film Analysis</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">SEM </span>
+                        <span class="skill-item">TEM </span>
+                        <span class="skill-item">XPS </span>
+                        <span class="skill-item">XRD </span>
+                        <span class="skill-item">GIWAXS </span>
+                        <span class="skill-item">FTIR </span>
+                        <span class="skill-item">SIMS </span>
+                        <span class="skill-item">XRR </span>
+                        <span class="skill-item">Raman spectra </span>
+                        <span class="skill-item">Hall measurement </span>
+                        <span class="skill-item">UV-Vis spectrum </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Design Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">AutoCad (2D) </span>
+                        <span class="skill-item">Solid Edge (3D) </span>
+                        <span class="skill-item">HFSS (RF Field Simulation) </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="work-item">
+                <h3 class="work-title">MRD (MEMS Research & Development), WISOL</h3>
+                <div class="work-date">2017 - Present</div>
+                <ul class="achievements">
+                    <li>SAW (Surface Acoustic Wave) filter process development for power durability </li>
+                    <li>Enhancement of power durability of SAW device: Control Ti/Al crystal orientation </li>
+                    <li>Development of analysis method of Ti/Al electrode orientation direction </li>
+                    <li>Introduced novel governing equation of power durability and system </li>
+                    <li>Defined SAW Filter destruction model </li>
+                    <li>Resolved instability of SiOx sputtering process </li>
+                    <li>F-BAW (Thin Film Bulk Acoustic Wave) Filter Thin film quality/process optimization </li>
+                    <li>Resolved instability of reactive sputter system / process </li>
+                    <li>Development of analysis method of semi-epitaxy crystal growth of Mo, W, AlN, AlScN </li>
+                    <li>Optimization of sputtering process of MEMS membrane stack structure (Metal, Piezo electric/ Dielectric material) </li>
+                    <li>Introduced and invented novel thin film packaging for low cost Hermetic sealing </li>
+                    <li>Thin film analysis </li>
+                    <li>Development of measurement of wafer cutting angle </li>
+                    <li>Introduced/Developed various thin film analysis method </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">Center for Photovoltaic Materials, Korea University</h3>
+                <div class="work-date">2012 - 2017</div>
+                <ul class="achievements">
+                    <li>Development of room temperature Cu Dry Etching equipment/process (etch rate >60 Å/sec, 20 ℃) via novel high density plasma source </li>
+                    <li>Development of silicon deposition equipment and deposition process via neutral beam assisted CVD (linear Inner Antenna type high density ICP CVD base) </li>
+                    <li>Development of matching network via termination capacitor (Plasma uniformity, impurity control) </li>
+                    <li>Development of low temperature and low damage process for oxide material (IGZO, ITO) via magnet field shielded sputtering </li>
+                    <li>Development of multi-functional ITO [transparent conducting oxide (3E-4 Ωcm) & gas barrier (WVTR ~ 1E-5 g/m2/day)] </li>
+                    <li>Design and analysis of negative ion Energy analyzer (IEA) for oxide material deposition process </li>
+                    <li>Development of room temperature nano-crystal silicon and thin film transistor fabrication process via neutral beam assisted CVD (Field effect mobility > 20 cm2/Vs) </li>
+                    <li>Director: Flexible AMOLED display module development project (\25,000,000, Samsung, 2013) </li>
+                    <li>Research and development of novel non-volatile memory thin film transistor fabrication process via room temperature hydrogen neutral beam treatment process </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">National Fusion Research Institute</h3>
+                <div class="work-date">2004 - 2008</div>
+                <ul class="achievements">
+                    <li>Development, design, optimization of linear type ICP Antenna design via RF simulator (HFSS) for large area high density plasma source </li>
+                    <li>Analysis of plasma temperature and sputtered particle distribution via optical emission spectrum (OES) </li>
+                    <li>Development of neutral beam generate plasma source for silicon photovoltaic thin film application </li>
+                    <li>Development of hollow cathode type sputtering gun </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">Samsung Electronics</h3>
+                <div class="work-date">2004 - 2004</div>
+                <ul class="achievements">
+                    <li>Dry etching, ashing, process management, monitoring, yield control (300 mm wafer base) </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item">
+                <div class="education-title">Ph.D. in SemiconductorᆞDisplay Device Physics</div>
+                <div class="education-institution">Korea University, Sejong, Korea - Feb. 2012 </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-title">M.D. Information Technology</div>
+                <div class="education-institution">Handong University, Pohang, Korea - Aug. 2006 </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-title">B.A. Mechanical and Control Engineering</div>
+                <div class="education-institution">Handong University, Pohang, Korea - Feb. 2004 </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="summary">
+                Researching the physics of the relationship among plasma process, thin film, and device. 
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Jang Jin Nyoung — Plasma & Semiconductor Expert
+        </footer>
+    </div>
+</body>
+</html>

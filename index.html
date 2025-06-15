@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jang Jin Nyoung | Plasma & Semiconductor Expert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004080;
+            --accent-color: #e7f3ff;
+            --highlight-color: #4a90e2;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --text-color: #444;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .social-link:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-top-color: var(--highlight-color);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-color);
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--highlight-color);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .skill-item:hover {
+            background-color: var(--highlight-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .resume-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .resume-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .resume-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .resume-header {
+            padding: 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .resume-body {
+            padding: 25px;
+        }
+
+        .resume-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .resume-desc {
+            opacity: 0.9;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--secondary-color);
+            transition: all 0.5s ease;
+            z-index: -1;
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .featured-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 35px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-title {
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .tag {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--highlight-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: var(--text-color);
+            border-top: 1px solid #eee;
+        }
+
+        .language-toggle {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .language-btn {
+            padding: 8px 20px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .language-btn:hover, .language-btn.active {
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .language-btn.active {
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jang Jin Nyoung (장진녕)</h1>
+            <div class="subtitle">Ph.D. in Semiconductor & Display Device Physics</div>
+            <div class="subtitle">Plasma Processing & Thin Film Expert</div>
+
+            <p class="bio">
+                Experienced researcher and developer specializing in novel plasma processing for CVD, PVD, and dry etch applications. Possessing excellent capabilities in designing plasma sources and optimizing device performance, with a strong focus on room temperature, low damage, flexible, and large area processes.
+            </p>
+
+            <div class="social-links">
+                <a href="mailto:nic4004@naver.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                </div>
+
+            <div class="language-toggle">
+                <button class="language-btn active" onclick="switchLanguage('en')">English</button>
+                <button class="language-btn" onclick="switchLanguage('ko')">한국어</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title" id="expertise-title">Expertise</h2>
+                <p id="expertise-desc">
+                    Specialized in designing and optimizing plasma equipment and processes for various applications including display, semiconductor, and MEMS. Proficient in a wide range of plasma and thin film analysis techniques.
+                </p>
+
+                <div class="skill-list">
+                    <span class="skill-item">Plasma Processing</span>
+                    <span class="skill-item">CVD (ICP, CCP)</span>
+                    <span class="skill-item">PVD</span>
+                    <span class="skill-item">Dry Etch</span>
+                    <span class="skill-item">Thin Film Deposition</span>
+                    <span class="skill-item">Surface Treatment</span>
+                    <span class="skill-item">Plasma Diagnostics</span>
+                    <span class="skill-item">Thin Film Analysis</span>
+                    <span class="skill-item">Device Optimization</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" id="career-title">Career Highlights</h2>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 15px;">
+                        <strong>🔬 <span id="highlight1-title">Novel Plasma Processing Development</span></strong><br>
+                        <span id="highlight1-desc">Developed room temperature Cu dry etching and silicon deposition via novel high-density plasma sources. </span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>💡 <span id="highlight2-title">F-BAW Filter Thin Film Optimization</span></strong><br>
+                        <span id="highlight2-desc">Resolved instability in reactive sputter systems and optimized thin film quality for F-BAW filters. </span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>📐 <span id="highlight3-title">Plasma Source Design & Simulation</span></strong><br>
+                        <span id="highlight3-desc">Designed and optimized linear type ICP antenna using RF simulator (HFSS) for large area high-density plasma. </span>
+                    </li>
+                    <li>
+                        <strong>🛡️ <span id="highlight4-title">Multi-functional ITO Development</span></strong><br>
+                        <span id="highlight4-desc">Developed multi-functional ITO with excellent transparent conducting and gas barrier properties. </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="resume-section-title" style="max-width: 1000px; margin: 40px auto 20px;">Resume / Curriculum Vitae</h2>
+
+        <div class="resume-links">
+            <div class="resume-card">
+                <div class="resume-header">
+                    <h3 class="resume-title" id="en-resume-title">English Resume</h3>
+                    <p class="resume-desc" id="en-resume-desc">Comprehensive professional experience and achievements</p>
+                </div>
+                <div class="resume-body">
+                    <p id="en-resume-text">Detailed overview of my professional experience, technical expertise, and research contributions in English.</p>
+                    <a href="resume-english.html" class="btn" id="en-resume-btn">View English Resume</a>
+                </div>
+            </div>
+
+            <div class="resume-card">
+                <div class="resume-header">
+                    <h3 class="resume-title" id="ko-resume-title">한글 이력서</h3>
+                    <p class="resume-desc" id="ko-resume-desc">전문적인 경력과 업적을 한글로 정리</p>
+                </div>
+                <div class="resume-body">
+                    <p id="ko-resume-text">플라즈마 및 반도체 분야에서의 전문 경력, 연구 성과 등을 한글로 상세히 정리한 이력서입니다.</p>
+                    <a href="resume-korean.html" class="btn" id="ko-resume-btn">한글 이력서 보기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="margin-top: 40px;">
+            <h2 class="section-title" id="projects-title">Featured Technologies & Research Projects</h2>
+
+            <div class="featured-projects">
+                <div class="project-card">
+                    <img src="a.jpg" alt="Room Temperature Cu Dry Etching" class="project-img">
+                    <div class="project-body">
+                        <h3 class="project-title" id="project1-title">Room Temperature Copper Dry Etching</h3>
+                        <p id="project1-desc">Developed novel high-density plasma source and process for efficient copper dry etching at room temperature, achieving high etch rates with low damage. </p>
+                        <div class="tag-list">
+                            <span class="tag">Dry Etch</span>
+                            <span class="tag">Cu Process</span>
+                            <span class="tag">High-Density Plasma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="b.jpg" alt="Multi-functional ITO Film" class="project-img">
+                    <div class="project-body">
+                        <h3 class="project-title" id="project2-title">Multi-functional ITO Film Development</h3>
+                        <p id="project2-desc">Engineered Indium Tin Oxide (ITO) films exhibiting both excellent transparent conducting properties (3E-4 Ωcm) and superior gas barrier capabilities (WVTR ~ 1E-5 g/m2/day). </p>
+                        <div class="tag-list">
+                            <span class="tag">Thin Film</span>
+                            <span class="tag">ITO</span>
+                            <span class="tag">Gas Barrier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="c.jpg" alt="SAW Filter Process Development" class="project-img">
+                    <div class="project-body">
+                        <h3 class="project-title" id="project3-title">SAW Filter Power Durability Enhancement</h3>
+                        <p id="project3-desc">Developed processes to enhance the power durability of Surface Acoustic Wave (SAW) devices by controlling Ti/Al crystal orientation and defining destruction models. </p>
+                        <div class="tag-list">
+                            <span class="tag">SAW Filter</span>
+                            <span class="tag">MEMS</span>
+                            <span class="tag">Crystal Orientation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Jang Jin Nyoung. <span id="footer-text">All rights reserved.</span></p>
+            <p id="position">Plasma and Semiconductor Expert</p>
+        </footer>
+    </div>
+
+    <script>
+        // Define content for both languages
+        const content = {
+            en: {
+                bio: "Experienced researcher and developer specializing in novel plasma processing for CVD, PVD, and dry etch applications. Possessing excellent capabilities in designing plasma sources and optimizing device performance, with a strong focus on room temperature, low damage, flexible, and large area processes.",
+                expertiseTitle: "Expertise",
+                expertiseDesc: "Specialized in designing and optimizing plasma equipment and processes for various applications including display, semiconductor, and MEMS. Proficient in a wide range of plasma and thin film analysis techniques.",
+                careerHighlightsTitle: "Career Highlights",
+                highlight1Title: "Novel Plasma Processing Development",
+                highlight1Desc: "Developed room temperature Cu dry etching and silicon deposition via novel high-density plasma sources. ",
+                highlight2Title: "F-BAW Filter Thin Film Optimization",
+                highlight2Desc: "Resolved instability in reactive sputter systems and optimized thin film quality for F-BAW filters. ",
+                highlight3Title: "Plasma Source Design & Simulation",
+                highlight3Desc: "Designed and optimized linear type ICP antenna using RF simulator (HFSS) for large area high-density plasma. ",
+                highlight4Title: "Multi-functional ITO Development",
+                highlight4Desc: "Developed multi-functional ITO with excellent transparent conducting and gas barrier properties. ",
+                resumeTitle: "Resume / Curriculum Vitae",
+                englishResumeTitle: "English Resume",
+                englishResumeDesc: "Comprehensive professional experience and achievements",
+                englishResumeText: "Detailed overview of my professional experience, technical expertise, and research contributions in English.",
+                englishResumeBtn: "View English Resume",
+                koreanResumeTitle: "한글 이력서",
+                koreanResumeDesc: "전문적인 경력과 업적을 한글로 정리",
+                koreanResumeText: "플라즈마 및 반도체 분야에서의 전문 경력, 연구 성과 등을 한글로 상세히 정리한 이력서입니다.",
+                koreanResumeBtn: "한글 이력서 보기",
+                projectsTitle: "Featured Technologies & Research Projects",
+                project1Title: "Room Temperature Copper Dry Etching",
+                project1Desc: "Developed novel high-density plasma source and process for efficient copper dry etching at room temperature, achieving high etch rates with low damage. ",
+                project2Title: "Multi-functional ITO Film Development",
+                project2Desc: "Engineered Indium Tin Oxide (ITO) films exhibiting both excellent transparent conducting properties (3E-4 Ωcm) and superior gas barrier capabilities (WVTR ~ 1E-5 g/m2/day). ",
+                project3Title: "SAW Filter Power Durability Enhancement",
+                project3Desc: "Developed processes to enhance the power durability of Surface Acoustic Wave (SAW) devices by controlling Ti/Al crystal orientation and defining destruction models. ",
+                footerText: "All rights reserved.",
+                position: "Plasma and Semiconductor Expert"
+            },
+            ko: {
+                bio: "CVD, PVD, 건식 식각 등 다양한 응용 분야를 위한 혁신적인 플라즈마 공정 개발을 전문으로 하는 숙련된 연구 개발자입니다. 플라즈마 소스 설계 및 장치 최적화에 뛰어난 역량을 보유하고 있으며, 상온, 저손상, 유연성 및 대면적 공정에 중점을 둡니다.",
+                expertiseTitle: "전문 분야",
+                expertiseDesc: "디스플레이, 반도체, MEMS를 포함한 다양한 응용 분야를 위한 플라즈마 장비 및 공정 설계 및 최적화를 전문으로 합니다. 다양한 플라즈마 및 박막 분석 기술에 능숙합니다.",
+                careerHighlightsTitle: "주요 경력 성과",
+                highlight1Title: "새로운 플라즈마 공정 개발",
+                highlight1Desc: "새로운 고밀도 플라즈마 소스를 통해 상온 구리 건식 식각 및 실리콘 증착 기술을 개발했습니다. ",
+                highlight2Title: "F-BAW 필터 박막 최적화",
+                highlight2Desc: "반응성 스퍼터 시스템의 불안정성을 해결하고 F-BAW 필터의 박막 품질을 최적화했습니다. ",
+                highlight3Title: "플라즈마 소스 설계 및 시뮬레이션",
+                highlight3Desc: "RF 시뮬레이터(HFSS)를 사용하여 대면적 고밀도 플라즈마를 위한 선형 ICP 안테나를 설계하고 최적화했습니다. ",
+                highlight4Title: "다기능 ITO 개발",
+                highlight4Desc: "투명 전도성 및 가스 배리어 특성이 우수한 다기능 ITO를 개발했습니다. ",
+                resumeTitle: "이력서 / 경력기술서",
+                englishResumeTitle: "영문 이력서",
+                englishResumeDesc: "종합적인 전문 경력과 성과",
+                englishResumeText: "영어로 작성된 전문 경력, 기술적 전문성, 연구 성과에 대한 상세한 개요입니다.",
+                englishResumeBtn: "영문 이력서 보기",
+                koreanResumeTitle: "한글 이력서",
+                koreanResumeDesc: "전문적인 경력과 업적을 한글로 정리",
+                koreanResumeText: "플라즈마 및 반도체 분야에서의 전문 경력, 연구 성과 등을 한글로 상세히 정리한 이력서입니다.",
+                koreanResumeBtn: "한글 이력서 보기",
+                projectsTitle: "주요 기술 및 연구 프로젝트",
+                project1Title: "상온 구리 건식 식각",
+                project1Desc: "새로운 고밀도 플라즈마 소스 및 공정을 개발하여 상온에서 효율적인 구리 건식 식각을 수행하고, 저손상으로 높은 식각 속도를 달성했습니다. ",
+                project2Title: "다기능 ITO 박막 개발",
+                project2Desc: "우수한 투명 전도성(3E-4 Ωcm)과 뛰어난 가스 배리어 특성(WVTR ~ 1E-5 g/m2/day)을 모두 나타내는 산화인듐주석(ITO) 박막을 개발했습니다. ",
+                project3Title: "SAW 필터 전력 내구성 향상",
+                project3Desc: "Ti/Al 결정 방위 제어 및 파괴 모델 정의를 통해 표면탄성파(SAW) 장치의 전력 내구성을 향상시키는 공정을 개발했습니다. ",
+                footerText: "모든 권리 보유.",
+                position: "플라즈마 및 반도체 전문가"
+            }
+        };
+
+        function switchLanguage(lang) {
+            // Update active button
+            const buttons = document.querySelectorAll('.language-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            const activeButton = document.querySelector(`.language-btn[onclick="switchLanguage('${lang}')"]`);
+            activeButton.classList.add('active');
+
+            // Update content based on selected language
+            document.querySelector('.bio').textContent = content[lang].bio;
+            document.querySelector('#expertise-title').textContent = content[lang].expertiseTitle;
+            document.querySelector('#expertise-desc').textContent = content[lang].expertiseDesc;
+            document.querySelector('#career-title').textContent = content[lang].careerHighlightsTitle;
+
+            document.querySelector('#highlight1-title').textContent = content[lang].highlight1Title;
+            document.querySelector('#highlight1-desc').textContent = content[lang].highlight1Desc;
+            document.querySelector('#highlight2-title').textContent = content[lang].highlight2Title;
+            document.querySelector('#highlight2-desc').textContent = content[lang].highlight2Desc;
+            document.querySelector('#highlight3-title').textContent = content[lang].highlight3Title;
+            document.querySelector('#highlight3-desc').textContent = content[lang].highlight3Desc;
+            document.querySelector('#highlight4-title').textContent = content[lang].highlight4Title;
+            document.querySelector('#highlight4-desc').textContent = content[lang].highlight4Desc;
+
+            document.querySelector('#resume-section-title').textContent = content[lang].resumeTitle;
+
+            document.querySelector('#en-resume-title').textContent = content[lang].englishResumeTitle;
+            document.querySelector('#en-resume-desc').textContent = content[lang].englishResumeDesc;
+            document.querySelector('#en-resume-text').textContent = content[lang].englishResumeText;
+            document.querySelector('#en-resume-btn').textContent = content[lang].englishResumeBtn;
+
+            document.querySelector('#ko-resume-title').textContent = content[lang].koreanResumeTitle;
+            document.querySelector('#ko-resume-desc').textContent = content[lang].koreanResumeDesc;
+            document.querySelector('#ko-resume-text').textContent = content[lang].koreanResumeText;
+            document.querySelector('#ko-resume-btn').textContent = content[lang].koreanResumeBtn;
+
+            document.querySelector('#projects-title').textContent = content[lang].projectsTitle;
+
+            document.querySelector('#project1-title').textContent = content[lang].project1Title;
+            document.querySelector('#project1-desc').textContent = content[lang].project1Desc;
+            document.querySelector('#project2-title').textContent = content[lang].project2Title;
+            document.querySelector('#project2-desc').textContent = content[lang].project2Desc;
+            document.querySelector('#project3-title').textContent = content[lang].project3Title;
+            document.querySelector('#project3-desc').textContent = content[lang].project3Desc;
+
+            document.querySelector('#footer-text').textContent = content[lang].footerText;
+            document.querySelector('#position').textContent = content[lang].position;
+        }
+
+        // Initialize language on load
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('en'); // Default to English
+        });
+    </script>
+</body>
+</html>

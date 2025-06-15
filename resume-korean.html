@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장진녕 - 이력서</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004080;
+            --accent-color: #e7f3ff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+            --text-color: #444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section {
+            padding: 25px 35px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-color);
+            font-size: 1.4rem;
+        }
+
+        .summary {
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill-category {
+            flex: 1 1 250px;
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .skill-item {
+            background-color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .work-item {
+            margin-bottom: 25px;
+        }
+
+        .work-title {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.15rem;
+        }
+
+        .work-date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .work-description {
+            margin-bottom: 10px;
+        }
+
+        .achievements {
+            margin-left: 20px;
+        }
+
+        .achievements li {
+            margin-bottom: 8px;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .education-institution {
+            font-style: italic;
+        }
+
+        .certification-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .certification-item {
+            background-color: var(--light-gray);
+            padding: 12px 15px;
+            border-radius: 6px;
+            flex: 1 1 170px;
+        }
+
+        .certification-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 25px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>장진녕</h1>
+            <div class="tagline">반도체·디스플레이 소자 물리학 박사</div>
+            <div class="tagline">플라즈마 공정 및 박막 전문가</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 nic4004@naver.com
+                </div>
+                <div class="contact-item">
+                    📱 +82-10-2643-5538
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">목표</h2>
+            <div class="summary">
+                디스플레이, 반도체 및 MEMS 응용을 위한 플라즈마 장비 및 공정 개발. 
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">전문 요약</h2>
+            <div class="summary">
+                플라즈마 소스 설계부터 장치 최적화에 이르는 지식과 경험을 바탕으로 플라즈마 유도 공정 응용 분야에 이상적인 역량을 갖추고 있습니다.  이러한 플라즈마 관련 공정 기술 경험이 차세대 반도체 산업으로 이어지기를 희망합니다. 
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">자격</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>연구 / 개발 / 설계 / 공정</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">다양한 신규 플라즈마 소스 (CVD (ICP, CCP), PVD, ECR) </span>
+                        <span class="skill-item">건식 식각 </span>
+                        <span class="skill-item">박막 증착 </span>
+                        <span class="skill-item">표면 처리 (상온, 저손상, 유연성, 대면적, 결정 품질 제어) </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>다양한 플라즈마 진단 분석</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">랑뮤어 탐침 (Langmuir probe) </span>
+                        <span class="skill-item">광학 방출 분광법 (Optical Emission Spectroscopy, OES) </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>다양한 박막 분석</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">SEM </span>
+                        <span class="skill-item">TEM </span>
+                        <span class="skill-item">XPS </span>
+                        <span class="skill-item">XRD </span>
+                        <span class="skill-item">GIWAXS </span>
+                        <span class="skill-item">FTIR </span>
+                        <span class="skill-item">SIMS </span>
+                        <span class="skill-item">XRR </span>
+                        <span class="skill-item">라만 스펙트라 (Raman spectra) </span>
+                        <span class="skill-item">홀 측정 (Hall measurement) </span>
+                        <span class="skill-item">UV-Vis 스펙트럼 (UV-Vis spectrum) </span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>간단한 설계 도구</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">AutoCad (2D) </span>
+                        <span class="skill-item">Solid Edge (3D) </span>
+                        <span class="skill-item">HFSS (RF 필드 시뮬레이션) </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">경력</h2>
+
+            <div class="work-item">
+                <h3 class="work-title">MRD (MEMS 연구 개발), WISOL</h3>
+                <div class="work-date">2017년 - 현재</div>
+                <ul class="achievements">
+                    <li>전력 내구성 향상을 위한 SAW (Surface Acoustic Wave) 필터 공정 개발 </li>
+                    <li>SAW 소자의 전력 내구성 향상: Ti/Al 결정 방위 제어 </li>
+                    <li>Ti/Al 전극 방위 방향 분석 방법 개발 </li>
+                    <li>전력 내구성 및 시스템에 대한 새로운 지배 방정식 도입 </li>
+                    <li>SAW 필터 파괴 모델 정의 </li>
+                    <li>SiOx 스퍼터링 공정의 불안정성 해결 </li>
+                    <li>F-BAW (Thin Film Bulk Acoustic Wave) 필터 박막 품질/공정 최적화 </li>
+                    <li>반응성 스퍼터 시스템/공정의 불안정성 해결 </li>
+                    <li>Mo, W, AlN, AlScN의 반-에피택시 결정 성장 분석 방법 개발 </li>
+                    <li>MEMS 멤브레인 스택 구조 (금속, 압전/유전체 재료)의 스퍼터링 공정 최적화 </li>
+                    <li>저비용 밀봉을 위한 새로운 박막 패키징 도입 및 발명 </li>
+                    <li>박막 분석 </li>
+                    <li>웨이퍼 절단 각도 측정 개발 </li>
+                    <li>다양한 박막 분석 방법 도입/개발 </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">고려대학교 광전지 재료 연구 센터</h3>
+                <div class="work-date">2012년 - 2017년</div>
+                <ul class="achievements">
+                    <li>새로운 고밀도 플라즈마 소스를 통한 상온 Cu 건식 식각 장비/공정 개발 (식각 속도 >60 Å/sec, 20 ℃) </li>
+                    <li>중성빔 보조 CVD (선형 내부 안테나형 고밀도 ICP CVD 기반)를 통한 실리콘 증착 장비 및 증착 공정 개발 </li>
+                    <li>종단 캐패시터를 통한 매칭 네트워크 개발 (플라즈마 균일성, 불순물 제어) </li>
+                    <li>자기장 차폐 스퍼터링을 통한 산화물 재료 (IGZO, ITO)의 저온 및 저손상 공정 개발 </li>
+                    <li>다기능 ITO 개발 [투명 전도성 산화물 (3E-4 Ωcm) 및 가스 배리어 (WVTR ~ 1E-5 g/m2/day)] </li>
+                    <li>산화물 재료 증착 공정을 위한 음이온 에너지 분석기 (IEA) 설계 및 분석 </li>
+                    <li>중성빔 보조 CVD를 통한 상온 나노결정 실리콘 및 박막 트랜지스터 제작 공정 개발 (전계 효과 이동도 > 20 cm2/Vs) </li>
+                    <li>책임자: 플렉시블 AMOLED 디스플레이 모듈 개발 프로젝트 (₩25,000,000, 삼성, 2013) </li>
+                    <li>상온 수소 중성빔 처리 공정을 통한 새로운 비휘발성 메모리 박막 트랜지스터 제작 공정 연구 개발 </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">국가핵융합연구소</h3>
+                <div class="work-date">2004년 - 2008년</div>
+                <ul class="achievements">
+                    <li>대면적 고밀도 플라즈마 소스를 위한 RF 시뮬레이터 (HFSS)를 통한 선형 ICP 안테나 설계 개발, 설계, 최적화 </li>
+                    <li>광학 방출 스펙트럼 (OES)을 통한 플라즈마 온도 및 스퍼터된 입자 분포 분석 </li>
+                    <li>실리콘 광전지 박막 응용을 위한 중성빔 생성 플라즈마 소스 개발 </li>
+                    <li>중공 음극형 스퍼터링 건 개발 </li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3 class="work-title">삼성전자</h3>
+                <div class="work-date">2004년 - 2004년</div>
+                <ul class="achievements">
+                    <li>건식 식각, 애싱, 공정 관리, 모니터링, 수율 제어 (300mm 웨이퍼 기반) </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">연구 관심 분야</h2>
+            <div class="summary">
+                플라즈마 공정, 박막 및 소자 간의 관계에 대한 물리학 연구. 
+            </div>
+        </section>
+
+        <footer>
+            © 2025 장진녕 — 플라즈마 및 반도체 전문가
+        </footer>
+    </div>
+</body>
+</html>
